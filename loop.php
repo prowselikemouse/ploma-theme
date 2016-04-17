@@ -16,7 +16,7 @@
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<?php echo get_the_post_thumbnail($post->ID , 'large') ?>
+			<?php echo get_the_post_thumbnail($post->ID , 'landscape') ?>
 			<div class="entry-details-container">
 				<div class="entry-details">
 					<h4><?php the_date('F j, Y'); ?></h4>

@@ -12,6 +12,7 @@ function theme_setup() {
 	*  sizes with add_image_size. */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
+	add_image_size('landscape', 600, 400, true);
 	add_image_size('square', 150, 150, true);
 
 
@@ -22,7 +23,8 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'primary' => 'Primary Navigation',
+		'social' => 'Social Navigation'
 	) );
 
 	/*
@@ -46,6 +48,7 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+	wp_enqueue_style('typekit', '');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -77,6 +80,14 @@ function hackeryou_scripts() {
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source
     array( 'jquery', 'plugins' ), //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+    wp_enqueue_script(
+    'smoothscroll', //handle
+    get_template_directory_uri() . '/js/smoothscroll.js', //source
+    array('jquery'), //dependencies
     null, // version number
     true //load in footer
   );
@@ -126,15 +137,15 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 40;
+	return 45;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 
 /*
- * Returns a "Continue Reading" link for excerpts
+ * Returns a "Read More" link for excerpts
  */
 function hackeryou_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">Read More <span class="meta-nav">&rarr;</span></a>';
+	return ' <a href="'. get_permalink() . '">Read More <i class="fa fa-chevron-right"></i></a>';
 }
 
 /**
@@ -168,11 +179,18 @@ function hackeryou_widgets_init() {
 	register_sidebar( array(
 		'name' => 'Primary Widget Area',
 		'id' => 'primary-widget-area',
-		'description' => 'The primary widget area',
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => 'Footer Widget Area',
+		'id' => 'footer-widget-are',
+		'before_widget' => '<div class="footer-column">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
 	) );
 
 }
@@ -275,4 +293,12 @@ function get_post_parent($post) {
 	else {
 		return $post->ID;
 	}
+}
+
+/* get_ */
+function get_thumbnail_url( $post ) {
+	$imageID = get_post_thumbnail_id( $post->ID ); 
+	$imageURL = wp_get_attachment_url( $imageID );
+	return $imageURL;
+	//want to return the url to be able to do something with it
 }
