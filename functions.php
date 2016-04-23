@@ -12,7 +12,9 @@ function theme_setup() {
 	*  sizes with add_image_size. */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
-	add_image_size('landscape', 600, 400, true);
+	add_image_size('landscape', 600, 400, array('center', 'center'));
+	add_image_size('landscape-small', 480, 320, array('center', 'center'));
+	add_image_size('portrait', 400, 500, array('center', 'center'));
 	add_image_size('square', 150, 150, true);
 
 
@@ -46,9 +48,8 @@ of writing our own link tags in the header. */
 
 function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
-
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
-	wp_enqueue_style('typekit', '');
+	wp_enqueue_style('typekit', 'https://use.typekit.net/xrl6fqs.js');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -95,6 +96,10 @@ function hackeryou_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
 
+/* Remove WP bar */
+
+add_filter( 'show_admin_bar', '__return_false' );
+
 
 /* Custom Title Tags */
 
@@ -137,7 +142,7 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 45;
+	return 30;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 
@@ -300,5 +305,5 @@ function get_thumbnail_url( $post ) {
 	$imageID = get_post_thumbnail_id( $post->ID ); 
 	$imageURL = wp_get_attachment_url( $imageID );
 	return $imageURL;
-	//want to return the url to be able to do something with it
+	//want to return the url to be able to do something with it (set it as a background image)
 }

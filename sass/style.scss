@@ -1,10 +1,10 @@
 /*
-* Theme Name: HackerYou Starter Theme
-* Theme URI: http://hackeryou.com;
-* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Theme Name: Ploma Theme
+* Theme URI: http://www.prowselikemouse.com;
+* Description: Custom-made Ploma Theme a 'writer's blog
 * Version: 1.0
-* Author: HackerYou
-* Author URI: http://hackeryou.com
+* Author: ProwseLikeMouse
+* Author URI: http://www.prowselikemouse.com
 */
 
 @import 'normalize';
@@ -12,6 +12,7 @@
 @import 'navigation';
 @import 'sidebar';
 @import 'comments';
+@import 'front-page';
 @import 'footer';
 /*
 ====================================
@@ -28,9 +29,16 @@ body {
 	color: #333;
 }
 
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
 .container {
-	max-width: 1200px;
+	max-width: 960px;
 	margin: 0 auto;
+	position: relative;
 }
 
 .content {

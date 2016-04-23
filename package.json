@@ -1,7 +1,7 @@
 {
-  "name": "theme-hackeryou",
+  "name": "theme-ploma",
   "version": "1.0.0",
-  "description": "A starter HackerYou theme",
+  "description": "Ploma - A Custom Wordpress Theme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.9.11",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^2.4.0",

@@ -13,21 +13,14 @@
 
 <body <?php body_class(); ?>>
 
-<header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
-
-    <nav class="main-nav"><?php wp_nav_menu( array(
+  <div class="container clearfix">
+    <nav class="main-menu scroll"><?php wp_nav_menu( array(
         'container' => false,
         'theme_location' => 'primary'
       )); ?>
     </nav>
 
-    <nav class="mobile-nav">
+  <!--   <nav class="mobile-nav">
       <div class="menu-btn">
         <div class="bar"></div>
       </div>
@@ -37,8 +30,7 @@
         'theme_location' => 'primary'
         )); ?>
       </div>
-    </nav> <!--/.mobile-nav-->
+    </nav>  --><!--/.mobile-nav-->
 
   </div> <!-- /.container -->
-</header><!--/.header-->
 

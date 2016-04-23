@@ -1,14 +1,173 @@
-ul.menu {
-	margin: 0;
-	padding: 0;
-	li {
-		display: inline;
-		margin-right: 10px;
-		a {
-			color: #333;
-			padding: 10px;
-			background: #333;
-			color: white;
+.main-menu {
+	ul {
+		// width: 30%;
+		float: right;
+		margin-top: 2rem;
+		display: flex;
+		flex-direction: row;
+		// justify-content: space-between;
+		// align-items: flex-end;
+		li a{
+			padding: 0 1rem;
+			margin: 0;
+			border-right: 1px solid grey;
+			border-left: 1px solid transparent;
+			transition: all 0.6s ease;
+			text-transform: lowercase;
+			// &:hover {
+			// 	border: 1px solid grey;
+			// }
+			// &:hover + li {
+			// 	border-right: 1px solid transparent;
+			// }
+		}
+		li:last-of-type a {
+			border-right: 1px solid transparent;
+			&:hover {
+				border-right: 1px solid grey;
+			}
 		}
 	}
+
 }
+// .mobile-nav {
+// 	position: absolute;
+// 	width: 100%;
+// 	right: 0;
+// 	z-index: 10;
+// 	transition: background 500ms ease;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 50px 50px 20px;
+// 	}
+// 	ul.menu {
+// 		margin: 0;
+// 		padding: 0;
+// 		display: flex;
+// 		li {
+// 			margin-right: 10px;
+// 			border-bottom: solid 1px transparent;
+// 			transition: all 0.45s ease-in-out;
+// 			&:hover a {
+// 				border-bottom: solid 1px #333;
+// 			}
+// 			a {
+// 				// @include sansSerif(white, 1rem);
+// 				padding: 10px;
+// 				transition: all 0.45s ease-in-out;
+// 		// 		&:hover {
+// 		// 			// color: $gold;
+// 		// 		}
+// 		// 		@media (max-width: $mdview) {
+// 		// 			// @include sansSerifBold(white, 2rem);
+// 		// 		}
+// 		// 	}
+// 		// 	@media (max-width: $mdview) {
+// 		// 		text-align: center;
+// 		// 		margin: 2rem 0;
+// 		// 	}
+// 		// 	@media (max-width: 400px) {
+// 		// 		margin: 1.5rem 0;
+// 		// 	}
+// 		}
+// 		// @media (max-width: $mdview) {
+// 		// 	flex-direction: column;
+// 		// }
+// 	}
+// 	&.scroll {
+// 		background: rgba(0,0,0,0.8);
+// 		position: fixed;
+//       	top: -70px;
+//       	transform: translateY(70px);
+//       	transition: transform 500ms ease,background 900ms ease;
+// 	}
+// } 
+
+// nav.main-nav {
+// 	// @media (max-width: $mdview) {
+// 	// 	display: none;
+// 	// }
+// }
+
+// nav.mobile-nav {
+// 	display: none;
+// 	.menu-btn {
+// 		width: 3rem;
+// 		height: 3rem;
+// 		cursor: pointer;
+// 		.bar, .bar:after, .bar:before {
+// 			width: 3rem;
+// 			height: 0.2rem;
+// 		}
+// 		.bar {
+// 			position: relative;
+// 			transform: translateY(1.5rem);
+// 			background: rgba(244, 186, 72, 1);
+// 			transition: all 0ms 300ms;
+// 			&.animate {
+// 				background: rgba(244, 186, 72, 0);
+// 			}
+// 		}
+
+// 		.bar:before {
+// 			content: "";
+// 			position: absolute;
+// 			left: 0;
+// 			bottom: 1rem;
+// 			background: rgba(244, 186, 72, 1);
+// 			transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+// 		}
+
+// 		.bar:after {
+// 			content: "";
+// 			position: absolute;
+// 			left: 0;
+// 			top: 1rem;
+// 			background: rgba(244, 186, 72, 1);
+// 			transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+// 		}
+
+// 		.bar.animate:after {
+// 			top: 0;
+// 			transform: rotate(45deg);
+// 			transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+// 		}
+
+// 		.bar.animate:before {
+// 			bottom: 0;
+// 			transform: rotate(-45deg);
+// 			transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+// 		}
+// 	}
+// 	// @media (max-width: $mdview) {
+// 	// 	display: block;
+// 	// 	#hotaru-logo {
+// 	// 		// @include column(2);
+// 	// 	}
+// 		.menu-btn {
+// 			margin: 0.45rem;
+// 			// @include push(10);
+// 		}
+// 	}
+// 	.mobile-nav-container {
+// 		display: none;
+// 		clear: both;
+// 		// @media (max-width: $mdview) {
+// 		// 	height: 100vh;
+// 		// }
+// 	}
+
+
+// .menu-btn:hover:before {
+//   box-shadow: 0 0 0 #fff;
+//   transform: translateY(10px) rotate(45deg);
+// }
+
+// .menu-btn:hover:after{
+//   transform: translateY(-10px) rotate(-45deg);
+// }
+
+// .mobile-bg {
+// 	background: rgba(0,0,0,0.8);
+// }

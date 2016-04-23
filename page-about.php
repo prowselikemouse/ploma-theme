@@ -5,7 +5,6 @@ get_header(); ?>
 <div class="main">
   <div class="container">
 
-    <div class="content">
       <?php $imageURL = get_thumbnail_url($post); ?>
      <img src="<?php echo $imageURL ?>" alt="">
       <?php // Start the loop ?>
@@ -15,7 +14,6 @@ get_header(); ?>
         <?php the_content(); ?>
 
       <?php endwhile; // end the loop?>
-    </div> <!-- /.content -->
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->
