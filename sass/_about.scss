@@ -1,0 +1,30 @@
+.about-content {
+	margin: 6rem 0 10rem;
+
+}
+
+.about-page-title {
+	position: relative;
+	left: 6rem;
+	top: -1rem;
+
+}
+.about-info {
+	display: flex;
+	flex-direction: column;
+	border: 2px solid black;
+}
+
+.about-image {	
+	display: flex;
+	position: relative;
+	top: -3rem;
+	z-index: -1;
+	img {
+		margin: 0 auto;
+	}
+}
+
+.about-paragraph {
+	margin: 3rem;
+}

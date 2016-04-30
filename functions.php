@@ -13,6 +13,7 @@ function theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('landscape', 600, 400, array('center', 'center'));
+	add_image_size('landscape-large', 900, 600, array('center', 'center'));
 	add_image_size('landscape-small', 480, 320, array('center', 'center'));
 	add_image_size('portrait', 400, 500, array('center', 'center'));
 	add_image_size('square', 150, 150, true);
@@ -306,4 +307,30 @@ function get_thumbnail_url( $post ) {
 	$imageURL = wp_get_attachment_url( $imageID );
 	return $imageURL;
 	//want to return the url to be able to do something with it (set it as a background image)
+}
+
+add_filter( 'widget_tag_cloud_args', 'change_widget_tag_cloud_args' );
+function change_widget_tag_cloud_args( $args ) {
+	$args['number'] = 20;
+	$args['largest'] = 1.4;
+	$args['smallest'] = 1.4;
+	$args['unit'] = 'rem';
+	$args['exclude'] = array(20, 80);
+	return $args;
+}
+
+function Get_Post_Number($postID){
+	$postNumberQuery = new WP_Query('orderby=date&order=ASC&posts_per_page=-1');
+	$counter = 1;
+	$postCount = 6;
+	if($postNumberQuery->have_posts()) :
+		while ($postNumberQuery->have_posts()) : $postNumberQuery->the_post();
+			if ($postID == get_the_ID()){
+				$postCount = $counter;
+			} else {
+				$counter++;
+			}
+	endwhile; endif;
+	wp_reset_query();
+	return $postCount;
 }

@@ -1,6 +1,7 @@
 .sidebar {
 	width: 30%;
 	float: left;
+	margin-top: 10rem;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -8,4 +9,41 @@
 			list-style: none;
 		}
 	}
+}
+
+.widget-title {
+	font-size: 1.6rem;
+}
+
+#searchform {
+	margin-bottom: 5rem;
+	font-size: 1.6rem;
+}
+
+input[type=search] {
+	border: none;
+	border-bottom: 1px solid black;
+	display: block;
+	width: 80%;
+	margin-bottom: 1rem;
+}
+
+input[type=submit] {
+	border: 1px solid black;
+	background-color: white;
+	float: right;
+	margin-right: 20%;
+	text-transform: lowercase;
+}
+
+.widget_tag_cloud,
+.widget_archive {
+	margin-bottom: 4rem;
+}
+
+.tagcloud a {
+	border: 1px solid black;
+	padding: 0.4rem 0.8rem;
+	font-size: 1.6rem;
+	line-height: 3rem;
 }

@@ -1,0 +1,46 @@
+.contact-content {
+	margin: 6rem 0 20rem;
+
+}
+
+.contact-page-title {
+	position: relative;
+	left: 6rem;
+	top: -1rem;
+
+}
+.contact-info {
+	display: flex;
+	flex-direction: column;
+	border: 2px solid black;
+}
+
+.contact-image {	
+	display: flex;
+	position: relative;
+	top: -3rem;
+	z-index: -1;
+	img {
+		margin: 0 auto;
+	}
+}
+
+.wpcf7-form p {
+	text-align: center;
+}
+
+.wpcf7-text,
+.wpcf7-textarea {
+	width: 94%;
+	border: none;
+}
+
+.wpcf7-text {
+	border-bottom: 1px solid black;
+}
+
+.wpcf7-submit {
+	float: left;
+	position: relative;
+	bottom: -5rem;
+}

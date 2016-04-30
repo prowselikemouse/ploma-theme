@@ -1,0 +1,52 @@
+.single-image {
+	display: flex;
+	position: relative;
+	top: -4rem;
+	z-index: -1;
+	img {
+		margin: 0 auto;
+	}
+}
+
+.single-main {
+	border: 2px solid black;
+	margin: 6rem 0;
+}
+
+.single-below {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+	top: -2rem;
+}
+
+.single-sidebar {
+	width: 30%;
+}
+.single-content {
+	width: 70%;
+}
+
+.single-sidebar .sidebar {
+	width: 100%;
+	margin-top: 6rem;
+}
+
+.entry-content {
+	padding-right: 8rem;
+}
+
+.single-below {
+	margin: 3rem;
+}
+
+#nav-below {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#respond textarea {
+	width: 100%;
+}

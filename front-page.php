@@ -35,12 +35,12 @@ get_header(); ?>
               ) ); ?>
             <?php if ( $blogQuery->have_posts() ) : ?>
             <?php while ( $blogQuery->have_posts() ) : $blogQuery->the_post(); ?>
-          <div class="blog-post">
+          <div class="front-page-blog-post">
                
 <!--               <div class="blog-thumbnail">
  -->                <?php $image = the_post_thumbnail( 'landscape-small' ); ?>
 <!--               </div>
- -->            <div class="blog-excerpt">
+ -->            <div class="front-page-blog-excerpt">
                   <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                   <div class="post-details-container">
                     <h4><?php the_author(); ?></h4>
