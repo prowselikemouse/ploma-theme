@@ -3,22 +3,21 @@
 <div class="main">
   <div class="container">
     <div class="content">
-
       <?php if ( have_posts() ) the_post(); ?>
 
-      <h1>
+      <h1 class="archive-title">
         <?php if ( is_day() ) : ?>
-          Daily Archives: <?php the_date(); ?>
+          <?php the_date(); ?>
         <?php elseif ( is_month() ) : ?>
-          Monthly Archives: <?php the_date('F Y'); ?>
+          <?php the_date('F Y'); ?>
         <?php elseif ( is_year() ) : ?>
-          Yearly Archives: <?php the_date('Y'); ?>
+          </span><?php the_date('Y'); ?>
         <?php else : ?>
-          Blog Archives
+          blog archives
         <?php endif; ?>
       </h1>
 
-      <?php
+      <div class="archive-article"><?php
     	/* Since we called the_post() above, we need to
     	 * rewind the loop back to the beginning that way
     	 * we can run the loop properly, in full.
@@ -30,7 +29,7 @@
     	 * called loop-archives.php and that will be used instead.
     	 */
       get_template_part( 'loop', 'archive' );
-      ?>
+      ?></div>
 
     </div><!--/content-->
 

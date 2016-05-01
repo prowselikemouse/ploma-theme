@@ -1,7 +1,7 @@
 header {
 	display: flex;
 	flex-direction: row;
-	margin: 3rem 0;
+	margin: 5rem 0 3rem;
 }
 
 .front-page-header-text-box {
@@ -11,18 +11,33 @@ header {
 
 .front-page-title {
 	margin: 0;
-	width: 22rem;
+	width: 39rem;
 	position: absolute;
-	top: 3rem;
-	left: -2rem;
-	font-size: 3rem;
+	top: 4rem;
+	left: -4rem;
+	font-size: 5.6rem;
 	font-style: italic;
+	font-weight: 600;
+	text-transform: lowercase;
+	text-decoration: underline;
 }
 
 .front-page-subtext {
 	position: absolute;
-	bottom: 3rem;
-	left: 4rem;
+	bottom: 4rem;
+	left: 6rem;
+}
+
+.front-page-subtext1 {
+	font-family: "ambroise-std",serif;
+	font-size: 2.4rem;
+	font-style: italic;
+}
+
+.front-page-subtext2,
+.front-page-subtext3 {
+	font-family: "futura-pt", sans-serif;
+	font-size: 1.8rem;
 }
 
 .front-page-content {
@@ -34,18 +49,18 @@ header {
 	flex-direction: row;
 	width: 96.8%;
 	position: relative;
-	margin: 5rem 0;
+	margin: 10rem 0;
 	border: 2px solid black;
 	.wp-post-image {
 		position: relative;
-		top: -2rem;
+		top: -2.4rem;
 		z-index: -1;
 	}
 	&:nth-of-type(odd) {
 		flex-direction: row-reverse;
 		// left: -2rem;
 		.wp-post-image {
-			right: -2rem;
+			right: -2.4rem;
 		}
 	}
 	&:nth-of-type(even) {
@@ -60,18 +75,28 @@ header {
 }
 
 .front-page-blog-excerpt {
-	padding: 2rem;
+	padding:4rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-end;
+	h3 {
+		margin: 0 0 2rem;
+		font-size: 2.4rem;
+		font-style: italic;
+		text-decoration: underline;
+		a {
+			color: black;
+		}
+	}
 	p {
-		margin: 0;
+		margin: 2rem 0 0;
+		a {
+			color: #888888;
+		}
 	}
 	h4 {
-		margin: 0.5rem 0;
-	}
-	h3 {
-		margin: 0;
+		margin: 0.3rem 0;
+		font-size: 1.8rem;
 	}
 }
 

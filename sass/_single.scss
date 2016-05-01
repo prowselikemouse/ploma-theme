@@ -1,7 +1,16 @@
+.entry-title-top {
+	position: relative;
+	left: 6rem;
+	top: 1rem;
+	font-size: 3.6rem;
+	font-weight: 600;
+	font-style: italic;
+}
+
 .single-image {
 	display: flex;
 	position: relative;
-	top: -4rem;
+	top: -3rem;
 	z-index: -1;
 	img {
 		margin: 0 auto;
@@ -10,10 +19,11 @@
 
 .single-main {
 	border: 2px solid black;
-	margin: 6rem 0;
+	margin: 2rem 0 2rem;
 }
 
 .single-below {
+	margin: 2rem 4rem 5rem 4rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -28,17 +38,66 @@
 	width: 70%;
 }
 
+.entry-content {
+	padding-right: 8rem;
+	font-family: "futura-pt", sans-serif;
+	font-size: 2rem;
+	font-weight: 300;
+	pre {
+		font-family: "futura-pt", sans-serif;
+		font-size: 2rem;
+	}
+}
+
+.entry-title {
+	font-size: 3.2rem;
+	font-weight: 600;
+	margin-top: 0.6rem;
+	a {
+		color: black;
+	}
+}
+
+.entry-meta {
+	font-family: "futura-pt", sans-serif;
+	font-size: 1.6rem;
+	a {
+		color: black;
+	}
+}
+
 .single-sidebar .sidebar {
 	width: 100%;
 	margin-top: 6rem;
 }
 
-.entry-content {
-	padding-right: 8rem;
+
+.entry-utility {
+	font-family: "futura-pt", sans-serif;
+	font-size: 1.4rem;
+	margin-bottom: 2rem;
+	a {
+		color: black;
+	}
 }
 
-.single-below {
-	margin: 3rem;
+.nav-previous,
+.nav-next {
+	font-family: "ambroise-std",serif;
+	font-weight: 300;
+	font-style: italic;
+	a {
+		color: black;
+	}
+}
+
+.logged-in-as a {
+	color: black;
+}
+
+.comment-form-comment label {
+	font-size: 2.4rem;
+	text-transform: uppercase;
 }
 
 #nav-below {

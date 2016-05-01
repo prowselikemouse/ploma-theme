@@ -7,6 +7,11 @@
 		padding: 0;
 		li {
 			list-style: none;
+			font-family: "futura-pt", sans-serif;
+			font-size: 1.6rem;
+			a {
+				color: black;
+			}
 		}
 	}
 }
@@ -18,32 +23,40 @@
 #searchform {
 	margin-bottom: 5rem;
 	font-size: 1.6rem;
+	width: 80%;
 }
 
 input[type=search] {
 	border: none;
 	border-bottom: 1px solid black;
+	margin-bottom: 1.6rem;
+	width: 100%;
 	display: block;
-	width: 80%;
-	margin-bottom: 1rem;
+	font-family: "futura-pt", sans-serif;
 }
 
-input[type=submit] {
+.searchsubmit {
 	border: 1px solid black;
 	background-color: white;
+	padding: 0.2rem 1.2rem;
 	float: right;
-	margin-right: 20%;
+	font-family: "futura-pt", sans-serif;
 	text-transform: lowercase;
 }
 
 .widget_tag_cloud,
 .widget_archive {
-	margin-bottom: 4rem;
+	margin: 4rem 0;
 }
 
 .tagcloud a {
 	border: 1px solid black;
-	padding: 0.4rem 0.8rem;
+	padding: 0.2rem 0.8rem;
 	font-size: 1.6rem;
-	line-height: 3rem;
+	line-height: 3.6rem;
+	font-family: "futura-pt", sans-serif;
+	color: black;
+
 }
+
+

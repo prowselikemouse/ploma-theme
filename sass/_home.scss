@@ -1,7 +1,9 @@
+
 .individual-blog-post {
 	border: 2px solid black;
 	padding: 0 3rem 3rem 3rem;
-	margin: 10rem 0;
+	margin: 8rem 0;
+	position: relative;
 }
 
 .blog-image {
@@ -10,3 +12,23 @@
 	z-index: -1;
 }
 
+.blog-title {
+	font-size: 2rem;
+	a {
+		color: black;
+	}
+}
+
+.post-date {
+	display: flex;
+	font-size: 1.6rem;
+		margin: 0;
+}
+
+.blog-excerpt {
+	position: relative;
+	top: -2rem;
+	p a {
+		color: #888888;
+	}
+} 

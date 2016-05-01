@@ -1,0 +1,52 @@
+.archive-title,
+ {
+	font-size: 3.6rem;
+	font-style: italic;
+}
+
+.archive-article {
+	margin: 5rem 0;
+		.post {
+		border: 2px solid black;
+		padding: 3rem;
+		margin-bottom: 8rem;
+		img { 
+			position: relative;
+			top: -6rem;
+			z-index: -1;
+		}
+	}
+}
+
+.entry-details-container {
+	position: relative;
+	top: -2rem;
+	.entry-details {
+		h4 {
+			margin: 0;
+			font-size: 1.6rem;
+			a {
+				color: #888888;
+			}
+		}
+		p {
+			margin: 0;
+			a {
+				color: #888888;
+			}
+		}
+	}
+	.entry-title {
+		margin: 0.6rem 0;
+		a {
+			color: black;
+		}
+	}
+	.entry-content {
+		padding-right: 0;
+		p a {
+			color: #888888;
+		}
+	}
+
+}

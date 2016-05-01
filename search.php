@@ -5,8 +5,8 @@
 		<div class="content">
 			<?php if ( have_posts() ) : ?>
 
-				<h1>Search Results for: <?php echo get_search_query(); ?></h1>
-				<?php get_template_part( 'loop', 'search' ); ?>
+				<h1 class="archive-title">search results for: <?php echo get_search_query(); ?></h1>
+				<div class="archive-article"><?php get_template_part( 'loop', 'search' ); ?></div>
 
 			<?php else : ?>
 

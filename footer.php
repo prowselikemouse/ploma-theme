@@ -8,7 +8,7 @@
 </footer>
 <div class="container">
 	<div class="footer-copyright">
-		<h6>Ploma Theme by <a href="http://www.prowselikemouse.com" target="_blank">@prowselikemouse</a> - <span class="copyright-wordpress">Powered By <a href="http://wordpress.org">WordPress</a></span></h6>
+		<h6>Ploma Theme by <a href="http://www.prowselikemouse.com" target="_blank">@prowselikemouse</a> • <span class="copyright-wordpress">Powered By <a href="http://wordpress.org">WordPress</a></span></h6>
 	</div>
 </div>
 

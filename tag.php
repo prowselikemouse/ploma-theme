@@ -1,11 +1,10 @@
 <?php get_header(); ?>
-<p>Tag page</p>
 <div class="main">
   <div class="container">
 
     <div class="content">
-      <h1>Tag Archives: <?php single_tag_title(); ?></h1>
-      <?php get_template_part( 'loop', 'tag' ); ?>
+      <h1 class="archive-title"><?php single_tag_title(); ?></h1>
+      <div class="archive-article"><?php get_template_part( 'loop', 'tag' ); ?></div>
     </div> <!-- /.content -->
 
     <?php get_sidebar(); ?>

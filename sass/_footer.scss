@@ -1,6 +1,6 @@
 footer {
 	clear: both;
-	margin: 6rem 0 3rem;
+	margin: 6rem 0;
 }
 
 .footer-wrapper {
@@ -19,11 +19,31 @@ footer {
 	}
 }
 
+.footer-column {
+	h4 {
+		font-family: "ambroise-std",serif;
+		font-weight: 600;
+		font-size: 1.6rem;
+	}
+	div.textwidget,
+	li a {
+		font-family: "futura-pt", sans-serif;
+		font-size: 1.6rem;
+		font-weight: 300;
+		color: black;
+	}
+}
+
 .footer-button-container {
 	width: 4rem;
 	position: fixed;
 	bottom: 3rem;
 	right: 0;
+}
+
+i.fa-chevron-up {
+	font-size: 1.8rem;
+	color: black;
 }
 .footer-copyright {
 	text-align: center;
@@ -31,5 +51,13 @@ footer {
 	padding: 2rem 0 6rem;
 	h6 {
 		margin: 0;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		a {
+			color: black;
+		}
+		span {
+			font-weight: 300;
+		}
 	}
 }

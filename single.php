@@ -2,7 +2,7 @@
 <div class="main">
   <div class="container">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-      <h1 class="entry-title-top"><?php the_title(); ?></h1>
+    <h1 class="entry-title-top"><?php the_title(); ?></h1>
     <div class="single-main"> 
         <div class="single-image">
           <?php $image = the_post_thumbnail( 'landscape-large' ); ?> 
@@ -11,7 +11,6 @@
         <div class="single-content">
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
               <h1 class="entry-title"><?php the_title(); ?></h1>
-        
               <div class="entry-meta">
                 <?php hackeryou_posted_on(); ?>
               </div><!-- .entry-meta -->
@@ -38,8 +37,8 @@
       )); ?>
 
     <div id="nav-below" class="navigation">
-      <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>
-      <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p>
+      <p class="nav-previous"><?php previous_post_link('%link', '<--- |   %title'); ?></p>
+      <p class="nav-next"><?php next_post_link('%link', '%title   | --->'); ?></p>
     </div><!-- #nav-below -->
 
     <div class="single-comments"><?php comments_template( '', true ); ?></div>

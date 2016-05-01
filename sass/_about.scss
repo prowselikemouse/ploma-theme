@@ -1,14 +1,18 @@
 .about-content {
-	margin: 6rem 0 10rem;
+	margin: 2rem 0 10rem;
 
 }
 
 .about-page-title {
 	position: relative;
 	left: 6rem;
-	top: -1rem;
-
+	top: 1.6rem;
+	font-size: 3.6rem;
+	font-weight: 600;
+	font-style: italic;
+	text-transform: lowercase;
 }
+
 .about-info {
 	display: flex;
 	flex-direction: column;

@@ -3,17 +3,20 @@
 }
 
 h3 {
-	&#comments-title, &#reply-title {
+	&.comments-title, &#reply-title {
 		color: #000000;
-		font-weight: 700;
+		font-weight: 400;
 		font-size: 20px;
 		margin-bottom: 0;
 	}
-	&#comments-title {
+	&.comments-title {
 		padding: 24px 0;
 	}
 }
 
+.comments-title {
+	margin: 3.6rem 0;
+}
 .commentlist li {
 	&.comment {
 		border-bottom: 1px solid #e7e7e7;
@@ -41,16 +44,17 @@ h3 {
 	}
 }
 
-.commentlist {
-	ol {
-		list-style: decimal;
+.comment-list {
+	list-style-type: none;
+	-webkit-padding-start: 0px;
+	position: relative;
 	}
 	.avatar {
-		position: absolute;
+		// position: absolute;
 		top: 4px;
+		border-radius: 50%;
 		left: 0;
 	}
-}
 
 .comment-author {
 	cite {
@@ -64,7 +68,8 @@ h3 {
 }
 
 .comment-meta {
-	font-size: 12px;
+	font-family: "futura-pt", sans-serif;
+	font-size: 1.2rem;
 	margin: 0 0 5px;
 	a {
 		&:link, &:visited {
@@ -75,8 +80,10 @@ h3 {
 }
 
 .reply {
-	font-size: 12px;
-	padding: 0 0 24px;
+	font-family: "futura-pt", sans-serif;
+	font-size: 1.4rem;
+	font-style: italic;
+	margin: 0 0 2.4rem;
 	a {
 		color: #888888;
 	}
@@ -116,12 +123,12 @@ a.comment-edit-link {
 }
 
 input[type=submit] {
-	color: #333333;
+	border: 1px solid black;
+	background-color: white;
 }
 
 #respond {
-	margin-top: 24px;
-	border-top: 1px solid #e7e7e7;
+	margin-top: 4.8rem;
 	overflow: hidden;
 	position: relative;
 	.comment-notes {
@@ -158,7 +165,7 @@ h3#reply-title {
 	}
 	label {
 		color: #888888;
-		font-size: 12px;
+		font-size: 1.4rem;
 	}
 	input {
 		width: 98%;
@@ -181,10 +188,12 @@ h3#reply-title {
 		}
 	}
 	.form-submit {
-		margin: 0 0 24px;
+		margin: 1.6rem 0 2.4rem;
 		input {
 			width: auto;
-			font-size: 14px;
+			padding: 0.2rem 1.2rem;
+			font-size: 1.6rem;
+			text-transform: uppercase;
 		}
 	}
 	dl {
@@ -214,14 +223,10 @@ p.form-allowed-tags, .nocomments {
 
 .comment-meta a {
 	&:active, &:hover {
-		color: #ff4b33;
+		color: #c7c7c7;
 	}
 }
 
 .reply a:hover, a.comment-edit-link:hover {
-	color: #ff4b33;
-}
-
-#respond p, #comments-list ul #respond {
-	margin: 0;
+	color: #c7c7c7;
 }

@@ -13,7 +13,7 @@ get_header(); ?>
           <?php // Start the loop ?>
           <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
           <div class="front-page-header-text-box">    
-            <h2 class="front-page-title"><?php the_title(); ?></h2>
+            <h1 class="front-page-title"><?php the_title(); ?></h1>
             <div class="front-page-subtext">
                 <div class="front-page-subtext1"><?php the_field('text1') ?></div>
                 <div class="front-page-subtext2"><?php the_field('text2') ?></div>

@@ -6,21 +6,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php  wp_title('|', true, 'right'); ?></title>
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+  <script src="https://use.typekit.net/xrl6fqs.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <!-- stylesheets should be enqueued in functions.php -->
   <?php wp_head(); ?>
 </head>
 
 
-<body <?php body_class(); ?>>
+<body id="pageTop" <?php body_class(); ?>>
 
   <div class="container clearfix">
-    <nav class="main-menu scroll"><?php wp_nav_menu( array(
+    <nav class="main-nav scroll"><?php wp_nav_menu( array(
         'container' => false,
         'theme_location' => 'primary'
       )); ?>
     </nav>
 
-  <!--   <nav class="mobile-nav">
+<!-- <nav class="mobile-nav">
       <div class="menu-btn">
         <div class="bar"></div>
       </div>
@@ -30,7 +32,7 @@
         'theme_location' => 'primary'
         )); ?>
       </div>
-    </nav>  --><!--/.mobile-nav-->
+    </nav> <!--/.mobile-nav-->
 
   </div> <!-- /.container -->
 
