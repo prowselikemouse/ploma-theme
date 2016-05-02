@@ -1,7 +1,7 @@
 header {
 	display: flex;
 	flex-direction: row;
-	margin: 5rem 0 3rem;
+	margin: 3rem 0;
 }
 
 .front-page-header-text-box {
@@ -41,7 +41,7 @@ header {
 }
 
 .front-page-content {
-	margin: 5rem 0;
+	margin: 8rem 0;
 }
 
 .front-page-blog-post {
@@ -51,6 +51,9 @@ header {
 	position: relative;
 	margin: 10rem 0;
 	border: 2px solid black;
+	&:first-of-type {
+		margin: 6rem 0 10rem;
+	}
 	.wp-post-image {
 		position: relative;
 		top: -2.4rem;

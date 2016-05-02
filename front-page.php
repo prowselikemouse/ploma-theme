@@ -28,6 +28,7 @@ get_header(); ?>
 
       <section class="featured-posts">
         <div class="wrapper clearfix">
+         <h1 class="archive-title">featured works</h1>
             <?php $blogQuery = new WP_Query( 
               array(
                 'posts_per_page' => 3,
