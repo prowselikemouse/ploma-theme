@@ -5,7 +5,7 @@
     <h1 class="entry-title-top"><?php the_title(); ?></h1>
     <div class="single-main"> 
         <div class="single-image">
-          <?php $image = the_post_thumbnail( 'landscape-large' ); ?> 
+            <img src="<?php echo get_featured_url($post, 'landscape-large') ?>" alt="">
         </div>
       <div class="single-below">
         <div class="single-content">

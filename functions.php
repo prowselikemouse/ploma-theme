@@ -11,12 +11,13 @@ function theme_setup() {
 	*  a square size (also below). You can add more of your own crop
 	*  sizes with add_image_size. */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size(120, 90, true);
+	// set_post_thumbnail_size(120, 90, true);
 	add_image_size('landscape', 600, 400, array('center', 'center'));
 	add_image_size('landscape-large', 900, 600, array('center', 'center'));
 	add_image_size('landscape-small', 480, 320, array('center', 'center'));
 	add_image_size('portrait', 400, 500, array('center', 'center'));
 	add_image_size('square', 150, 150, true);
+
 
 
 	// Add default posts and comments RSS feed links to head
@@ -62,7 +63,7 @@ function hackeryou_scripts() {
 
 	//Don't use WordPress' local copy of jquery, load our own version from a CDN instead
 	wp_deregister_script('jquery');
-  wp_enqueue_script(
+	  wp_enqueue_script(
   	'jquery',
   	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
   	false, //dependencies
@@ -334,3 +335,9 @@ function Get_Post_Number($postID){
 	wp_reset_query();
 	return $postCount;
 }
+
+function get_featured_url( $post, $size ){
+	$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size);
+	return $image[0];
+}
+

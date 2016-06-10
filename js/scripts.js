@@ -2,32 +2,49 @@
 var app = {};
 
 //VARIABLES FOR THE STICKY NAV
-app.navheight = $('nav').height(); 
 //stores height of nav
+app.navheight = $('nav').height(); 
 console.log(app.navheight);
+//store height of header hero image section
 app.headerheight = $('header').height();
 console.log(app.headerheight);
-//stores height of header hero image section
-app.sectionheight = $('.sticky-top').height(); 
-console.log(app.sectionheight);
-//stores height of hero image section in about, contact & entry pages
+
+$(document).ready(function() {
+	var stickyNavTop = $('.main-nav').offset().top + 300;
+
+	var stickyNav = function(){
+		var scrollTop = $(window).scrollTop();		      
+			console.log(scrollTop)
+		if (scrollTop > stickyNavTop) { 
+		    $('.main-nav').addClass('sticky');
+			$('.footer-button-container').fadeIn();
+		} else if (scrollTop === 0) {
+		    $('.main-nav').removeClass('sticky'); 
+			$('.footer-button-container').fadeOut();
+		}
+	};
+
+	$(window).scroll(function() {
+	    stickyNav();
+	});
+
+	$('.main-nav .menu-item').hover(function() {
+
+		$(this).prev().children().addClass('no-border-right')},
+		function() {
+		$(this).prev().children().removeClass('no-border-right')
+	});
+});
+// app.sectionheight = $('.sticky-top').height(); 
+// console.log(app.sectionheight);
 
 
 //INIT FUNCTION WITH EVENT TRIGGERS
 app.init = function() {
-//EVENT LISTENER FOR ALTERNATING NAV ON SCROLL
-	$(window).on('scroll', function() {
-		if ($(this).scrollTop() > app.headerheight) {
-			$('nav').addClass('scroll');
-			// $('nav').css('padding', '20px 50px');
-			$('.footer-button-container').show();
-		} else if ($(this).scrollTop() === 0) {
-			$('nav').removeClass('scroll');
-			// $('nav').css('padding', '50px 50px 20px');
-			$('.footer-button-container').hide();
-		}
-	});
+
 //EVENT LISTENER FOR HAMBURGER NAV & CHANGING BG
+
+
 	$('.menu-btn').on('click', function(event) {
 		event.preventDefault;
 		$('.bar').toggleClass('animate');

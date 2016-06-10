@@ -15,24 +15,29 @@
 
 <body id="pageTop" <?php body_class(); ?>>
 
-  <div class="container clearfix">
-    <nav class="main-nav scroll"><?php wp_nav_menu( array(
-        'container' => false,
-        'theme_location' => 'primary'
-      )); ?>
+    <nav class="main-nav clearfix">
+      <div class="container">
+        <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_location' => 'primary'
+        )); ?>
+      </div> <!-- /.container -->
     </nav>
 
-<!-- <nav class="mobile-nav">
-      <div class="menu-btn">
-        <div class="bar"></div>
+    <nav class="mobile-nav">
+      <div class="container">
+        <div class="menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="mobile-nav-container">
+          <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_location' => 'primary'
+          )); ?>
+        </div>
       </div>
-      <div class="mobile-nav-container">
-        <?php wp_nav_menu( array(
-        'container' => false,
-        'theme_location' => 'primary'
-        )); ?>
-      </div>
-    </nav> <!--/.mobile-nav-->
+    </nav> <!--/.mobile-nav -->
 
-  </div> <!-- /.container -->
 

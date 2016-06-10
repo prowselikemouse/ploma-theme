@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<p>I am Clare.</p>
 <div class="main">
   <div class="container">
     <div class="content">

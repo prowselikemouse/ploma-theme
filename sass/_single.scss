@@ -10,11 +10,11 @@
 .single-image {
 	display: flex;
 	position: relative;
+	align-items: flex-start;
 	top: -3rem;
 	z-index: -1;
-	img {
-		margin: 0 auto;
-	}
+	max-width: 95%;
+	margin: 0 auto;
 }
 
 .single-main {
@@ -57,6 +57,10 @@
 	text-decoration: underline;
 	a {
 		color: black;
+		transition: all 0.6s;
+		&:hover {
+			color: #777;
+		}
 	}
 }
 

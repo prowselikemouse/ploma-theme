@@ -17,7 +17,7 @@
           <?php while ( $blogQuery->have_posts() ) : $blogQuery->the_post(); ?>
           <div class="individual-blog-post">
             <div class="blog-image">
-              <?php $image = the_post_thumbnail( 'landscape' ); ?> 
+              <img src="<?php echo get_featured_url($post, 'landscape') ?>" alt="">
             </div>
             <div class="blog-excerpt">
               <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>

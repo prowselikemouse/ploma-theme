@@ -21,12 +21,12 @@
 
 .about-image {	
 	display: flex;
+	align-items: flex-start;
 	position: relative;
 	top: -3rem;
 	z-index: -1;
-	img {
-		margin: 0 auto;
-	}
+	max-width: 95%;
+	margin: 0 auto;
 }
 
 .about-paragraph {

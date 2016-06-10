@@ -11,7 +11,9 @@ get_header(); ?>
 		<div class="contact-content">
 			<h2 class="contact-page-title"><?php the_title(); ?></h2>
 	    	<div class="contact-info">
-	    		<div class='contact-image'><?php $image = the_post_thumbnail( 'landscape-large' ); ?> </div>
+	    		<div class='contact-image'>
+		    		<img src="<?php echo get_featured_url($post, 'landscape-large') ?>" alt="">
+	    		</div>
 	    		<div class="contact-form"><?php the_content(); ?></div>
 	    	</div>
 		</div>

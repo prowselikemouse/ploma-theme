@@ -22,11 +22,11 @@
 .contact-image {	
 	display: flex;
 	position: relative;
+	align-items: flex-start;
 	top: -3rem;
 	z-index: -1;
-	img {
-		margin: 0 auto;
-	}
+	max-width: 95%;
+	margin: 0 auto;
 }
 
 .wpcf7-form p {

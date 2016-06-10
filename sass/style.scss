@@ -42,8 +42,22 @@ ul {
 	padding: 0;
 }
 
+a:active,
+a:focus,
+a:visited,
+a:link,
+a {
+	outline: 0;
+	color: black;
+}
+
+form:active {
+	outline: none;
+}
+
 .container {
 	max-width: 960px;
+	width: 85%;
 	margin: 0 auto;
 	position: relative;
 }
@@ -56,6 +70,18 @@ ul {
 
 .full {
 	width: 100%;
+}
+
+.sticky {
+    height: auto;
+    left: 0;
+   	padding-top: 2.4rem;
+    position: fixed;
+    margin-top: 0;
+    top: -70px;
+    transition: transform 0.7s ease;
+    z-index: 100;
+    transform: translateY(70px);
 }
 
 

@@ -1,14 +1,13 @@
 <?php
 /* Template Name: Front Page */
 get_header(); ?>
-<div class="main">
+<div class="main smoothScroll" id="pageTop">
   <div class="container">
 
-      <header>
-         <?php $image = the_post_thumbnail( 'portrait' ); ?> 
-          <div class="header-image">
-            <img src="<?php echo $image; ?>" alt="">
-          </div>
+      <header class="clearfix">
+         <div class="header-image">
+              <img src="<?php echo get_featured_url($post, 'portrait') ?>" alt="">
+        </div>
          
           <?php // Start the loop ?>
           <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -37,18 +36,19 @@ get_header(); ?>
             <?php if ( $blogQuery->have_posts() ) : ?>
             <?php while ( $blogQuery->have_posts() ) : $blogQuery->the_post(); ?>
           <div class="front-page-blog-post">
-               
-<!--               <div class="blog-thumbnail">
- -->                <?php $image = the_post_thumbnail( 'landscape-small' ); ?>
-<!--               </div>
- -->            <div class="front-page-blog-excerpt">
+                <div class="front-page-blog-image">
+                   <img src="<?php echo get_featured_url($post, 'landscape') ?>" alt="">
+
+
+                 </div>
+                <div class="front-page-blog-excerpt">
                   <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                   <div class="post-details-container">
                     <h4><?php the_author(); ?></h4>
                     <h4 id="post-date"><?php the_date('F j, Y'); ?></h4>
-                    <p><?php the_excerpt(); ?></p>
+                    <?php the_excerpt(); ?>
                   </div> <!--/.post-details-container-->
-              </div> <!--/.blog-excerpt-->
+              </div> <!--/.front-page-blog-excerpt-->
             </div> <!--/.blog-post--> 
                 <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
